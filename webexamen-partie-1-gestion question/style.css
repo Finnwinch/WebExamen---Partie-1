@@ -1,0 +1,318 @@
+body {
+    margin: 0;
+}
+
+header {
+    height: 75px;
+    background-color: #2F3E46;
+    &> nav {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        height: 70px;
+        &> a, &> p {
+            color: #84A98C;
+            text-decoration: none;
+            &#titleProject {
+                margin-left: 20px;
+                margin-right: auto;
+                font-family: Inter;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                padding: 10px;
+                &:hover {
+                    background-color: #354F52;
+                    color: #CAD2C5;
+                    border-radius: 8px;
+                }
+            }
+            &#username-display-welcome {
+                margin: 0;
+                &>#username-display-username {
+                    color: #FFC107;
+                    margin: 0 2px;
+                }
+                margin-right: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+section#visitor {
+    background-color: #f9f9f9; /* Fond clair pour la section */
+    padding: 20px; /* Espacement autour du contenu */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour donner de la profondeur */
+
+    & > p {
+        font-size: 16px; /* Taille de police pour les paragraphes */
+        line-height: 1.6; /* Espacement entre les lignes */
+        color: #333; /* Couleur du texte */
+        margin-bottom: 15px; /* Espacement entre les paragraphes */
+    }
+
+    & > ul {
+        list-style-type: disc; /* Style de liste à puces */
+        padding-left: 20px; /* Espacement à gauche pour la liste */
+        margin-bottom: 15px; /* Espacement en bas de la liste */
+
+        & > li {
+            font-size: 16px; /* Taille de police pour les éléments de la liste */
+            color: #555; /* Couleur du texte des éléments de la liste */
+            margin-bottom: 8px; /* Espacement entre les éléments de la liste */
+        }
+    }
+
+    & > a {
+        display: inline-block; /* Permet d'ajouter du padding */
+        padding: 10px 15px; /* Espacement intérieur pour les liens */
+        margin-right: 10px; /* Espacement entre les liens */
+        background-color: #007bff; /* Couleur de fond du lien */
+        color: white; /* Couleur du texte du lien */
+        text-decoration: none; /* Pas de soulignement */
+        border-radius: 4px; /* Coins arrondis */
+        transition: background-color 0.3s; /* Animation de transition */
+
+        &:hover {
+            background-color: #0056b3; /* Couleur de fond au survol */
+        }
+    }
+
+    & > p#message-formulaire {
+        color: #ff0000; /* Couleur rouge pour le message d'erreur */
+        font-weight: bold; /* Texte en gras */
+        text-align: center; /* Centrer le message */
+        margin-top: 20px; /* Espacement en haut du message */
+    }
+}
+
+
+section#acces {
+    background-color: #f1f1f1; /* Fond légèrement grisé */
+    padding: 30px; /* Espacement autour du contenu */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+
+    & > form {
+        margin-bottom: 20px; /* Espacement entre les formulaires */
+
+        &.register, &.login {
+            display: flex;
+            flex-direction: column; /* Aligne les champs en colonne */
+        }
+
+        & > input {
+            padding: 10px; /* Espacement intérieur */
+            margin-bottom: 10px; /* Espacement entre les champs */
+            border: 1px solid #ccc; /* Bordure grise */
+            border-radius: 4px; /* Coins arrondis */
+            font-size: 14px; /* Taille de police */
+            width: 100%; /* Largeur pleine */
+            box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
+        }
+
+        & > input[type="submit"] {
+            background-color: #007bff; /* Couleur de fond pour les boutons */
+            color: white; /* Couleur du texte */
+            cursor: pointer; /* Curseur en main */
+            transition: background-color 0.3s; /* Animation de transition */
+
+            &:hover {
+                background-color: #0056b3; /* Couleur au survol */
+            }
+        }
+    }
+
+    & > .loginButton, & > .RegisterButton {
+        margin-bottom: 10px; /* Espacement entre les boutons */
+
+        & > button {
+            padding: 10px 15px; /* Espacement intérieur */
+            background-color: #28a745; /* Couleur de fond pour les boutons */
+            color: white; /* Couleur du texte */
+            border: none; /* Pas de bordure */
+            border-radius: 4px; /* Coins arrondis */
+            cursor: pointer; /* Curseur en main */
+            transition: background-color 0.3s; /* Animation de transition */
+
+            &:hover {
+                background-color: #218838; /* Couleur au survol */
+            }
+        }
+    }
+
+    & > p#message-formulaire {
+        color: #ff0000; /* Couleur rouge pour le message d'erreur */
+        font-weight: bold; /* Texte en gras */
+        text-align: center; /* Centrer le message */
+        margin-top: 20px; /* Espacement en haut du message */
+    }
+}
+
+
+section#home {
+    & > div#formulaireAccountOperation {
+        margin-top: 10px;
+        display: flex;
+        align-items: center; /* Centre verticalement */
+        justify-content: center; /* Centre horizontalement */
+
+        & > form#deleteForm {
+            display: none; /* Masque le formulaire par défaut */
+            & > input {
+                margin: 0 5px;
+                padding: 10px; /* Espacement intérieur */
+                border: 1px solid #ccc; /* Bordure */
+                border-radius: 4px; /* Coins arrondis */
+                width: 200px; /* Largeur du champ */
+            }
+            &>input#delete {
+                margin-right: 10px; /* Espacement entre le bouton et le formulaire */
+                padding: 10px 15px; /* Espacement intérieur */
+                background-color: #dc3545; /* Couleur pour le bouton Delete */
+                color: white; /* Couleur du texte */
+                border: none; /* Pas de bordure */
+                border-radius: 4px; /* Coins arrondis */
+                cursor: pointer; /* Curseur en main */
+                transition: background-color 0.3s; /* Animation de transition */
+                &:hover {
+                    background-color: #c82333; /* Couleur au survol */
+                }
+            }
+        }
+
+        & > button#toggleDeleteForm {
+            margin-right: 10px; /* Espacement entre le bouton et le formulaire */
+            padding: 10px 15px; /* Espacement intérieur */
+            background-color: #dc3545; /* Couleur pour le bouton Delete */
+            color: white; /* Couleur du texte */
+            border: none; /* Pas de bordure */
+            border-radius: 4px; /* Coins arrondis */
+            cursor: pointer; /* Curseur en main */
+            transition: background-color 0.3s; /* Animation de transition */
+
+            &:hover {
+                background-color: #c82333; /* Couleur au survol */
+            }
+        }
+
+        & > form#disconnectForm {
+            margin-left: 4px; /* Espacement à gauche */
+
+            & > input[type="submit"] {
+                padding: 10px 15px; /* Espacement intérieur */
+                background-color: #007bff; /* Couleur pour le bouton Disconnected */
+                color: white; /* Couleur du texte */
+                border: none; /* Pas de bordure */
+                border-radius: 4px; /* Coins arrondis */
+                cursor: pointer; /* Curseur en main */
+                transition: background-color 0.3s; /* Animation de transition */
+
+                &:hover {
+                    background-color: #0056b3; /* Couleur au survol */
+                }
+            }
+        }
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    & > table {
+        margin-top: 20px;
+        display: table; /* Utilise 'table' pour une structure de tableau */
+        width: 80%; /* Remplir toute la largeur */
+        border-collapse: collapse; /* Élimine les espaces entre les cellules */
+        & > thead {
+            & > tr {
+                background-color: #007bff; /* Couleur de fond des en-têtes */
+                color: white; /* Couleur du texte des en-têtes */
+                & > th {
+                    padding: 12px; /* Espacement intérieur des en-têtes */
+                    text-align: left; /* Aligner le texte à gauche */
+                }
+            }
+        }
+
+        & > tbody {
+            & > tr {
+                & > td {
+                    padding: 12px; /* Espacement intérieur des cellules */
+                    border-bottom: 1px solid #ddd; /* Bordure légère entre les lignes */
+                    text-align: left; /* Aligner le texte à gauche */
+
+                    & > button {
+                        background-color: #007bff; /* Couleur de fond des boutons */
+                        color: white; /* Couleur du texte des boutons */
+                        border: none; /* Pas de bordure */
+                        padding: 8px 12px; /* Espacement intérieur des boutons */
+                        border-radius: 4px; /* Coins arrondis */
+                        cursor: pointer;
+                        transition: background-color 0.3s; /* Animation de transition */
+                    }
+
+                    & > button:hover {
+                        background-color: #0056b3; /* Couleur de fond au survol des boutons */
+                    }
+                }
+            }
+        }
+
+        & > thead > tr > th:nth-child(1) { /* Colonne ID */
+            width: 15%; /* Largeur pour la colonne ID */
+            text-align: left; /* Alignement à gauche pour les titres */
+        }
+
+        & > thead > tr > th:nth-child(2) { /* Colonne Nom */
+            width: 55%; /* Largeur pour la colonne Nom */
+            text-align: left; /* Alignement à gauche pour les titres */
+        }
+
+        & > thead > tr > th:nth-child(3) { /* Colonne Opération */
+            width: 30%; /* Largeur pour la colonne Opération */
+            text-align: right; /* Alignement à droite pour les titres */
+        }
+
+        & > tbody > tr > td:nth-child(1) { /* Colonne ID */
+            width: 15%; /* Largeur pour la colonne ID */
+        }
+
+        & > tbody > tr > td:nth-child(2) { /* Colonne Nom */
+            width: 55%; /* Largeur pour la colonne Nom */
+        }
+
+        & > tbody > tr > td:nth-child(3) { /* Colonne Opération */
+            width: 30%; /* Largeur pour la colonne Opération */
+            text-align: right; /* Aligner le texte à droite */
+        }
+    }
+
+    & > button {
+        margin-top: 20px; /* Espacement au-dessus du bouton "Create" */
+        align-self: center; /* Aligne le bouton au centre */
+        background-color: #28a745; /* Couleur de fond */
+        color: white; /* Couleur du texte */
+        border: none; /* Pas de bordure */
+        padding: 10px 15px; /* Espacement intérieur */
+        border-radius: 4px; /* Coins arrondis */
+        cursor: pointer;
+        width: 80%;
+        transition: background-color 0.3s; /* Animation de transition */
+    }
+
+    & > button:hover {
+        background-color: #218838; /* Couleur de fond au survol */
+    }
+}
+
+
+
+
+footer {
+
+}
